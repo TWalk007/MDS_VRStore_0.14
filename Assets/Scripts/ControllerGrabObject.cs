@@ -95,11 +95,6 @@ public class ControllerGrabObject : MonoBehaviour {
 		{
 			objectInHand.GetComponent<HighlightController>().objectInHand = objectInHandCheck;
 		}
-		else if (objectInHand.GetComponent<HighlightController_Rinse>())
-		{
-			objectInHand.GetComponent<HighlightController_Rinse>().objectInHand = objectInHandCheck;
-		}
-
 	}
 
 	private FixedJoint AddFixedJoint()
@@ -125,10 +120,6 @@ public class ControllerGrabObject : MonoBehaviour {
 		{
 			objectInHand.GetComponent<HighlightController>().objectInHand = objectInHandCheck;
 		}
-		else if (objectInHand.GetComponent<HighlightController_Rinse>())
-		{
-			objectInHand.GetComponent<HighlightController_Rinse>().objectInHand = objectInHandCheck;
-		}
 
 		objectInHand = null;
 	}
@@ -148,8 +139,6 @@ public class ControllerGrabObject : MonoBehaviour {
 			{
 				ReleaseObject();
 			}
-		}
-		
-		// TODO  Rotating object in hand right now conflicts with the joint.  Need to somehow turn the joint off temporarily to allow.          
+		}		      
 	}
 }
